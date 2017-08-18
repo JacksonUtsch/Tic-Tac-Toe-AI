@@ -8,18 +8,18 @@
 
 import UIKit
 
+public let screenSize = UIScreen.main.bounds
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let GameBoard = TTTBoard(frame: CGRect(x: screenSize.width/2, y: screenSize.height/2, width: screenSize.width, height: screenSize.width))
+        view.addSubview(GameBoard)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
-
